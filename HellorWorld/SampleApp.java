@@ -25,6 +25,27 @@ public class SampleApp {
             //文字列
             String msg2 = "Hello \nWorld Again\t!!";
             System.out.println(msg2);
-
+            
+            /* 四則演算 */
+            int i;
+            
+            // 除
+            i = 10 / 3;
+            System.out.println(i);
+            // 余
+            i = 10 % 3;
+            System.out.println(i);
+            
+            // インクリメント/デクリメント
+            int x1 = 5;
+            x1++;
+            System.out.println(x1);
+            x1--;
+            System.out.println(x1);
+            
+            // 加
+            x1 = 5;
+            x1 += 12;
+            System.out.println(x1);
         }
 }
