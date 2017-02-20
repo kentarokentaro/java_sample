@@ -159,13 +159,33 @@ public class SampleApp {
             
             /* 配列の要素を操作 */
             int[] sales3 = {700,400,500};
-            // length = 要素数
+            // .length = 要素数
             for (int i7 = 0; i7 < sales3.length; i7++) {
                 System.out.println("配列の要素_for = " + sales3[i7]);
-            } 
+            }
             
             for(int sale : sales3) {
                 System.out.println("配列の要素_forin = " + sale);
             }
+            
+            /* 基本データ型と参照型 */
+            int x2 = 10;
+            int y1 = x2;
+            y1 = 5;
+            System.out.println("データ型 = " + x2);
+            System.out.println("データ型 = " + y1);
+            
+            int[] a1 = {3,5,7};
+            int[] b  = a1;
+            b[1] = 8;
+            System.out.println("参照型 = "+a1[1]);
+            System.out.println("参照型 = "+b[1]);
+            
+            // String型は参照型であってもメモリ領域への書き込みは禁止されている
+            String s = "hello";
+            String t1 = s;
+            t1 = "world";
+            System.out.println("参照型 = "+s);
+            System.out.println("参照型 = "+t1);
         }
 }
