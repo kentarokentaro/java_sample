@@ -47,5 +47,18 @@ public class SampleApp {
             x1 = 5;
             x1 += 12;
             System.out.println(x1);
+            
+            
+            /* データ型の変換 */
+            
+            // double → Int
+            double d1 = 542325.45;
+            int i1 = (int)d1;
+            System.out.println(i1);
+            
+            // Int → double
+            int i2 = 10;
+            double d2 = (double)i2 / 4;
+            System.out.println(d2);
         }
 }
