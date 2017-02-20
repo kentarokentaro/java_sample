@@ -115,5 +115,21 @@ public class SampleApp {
             }
             while (i4 < 10);
 
+            /* for */
+            for (int i5 = 0; i5 < 10; i5++ ) {
+                if (i5 == 5) {
+                    break;
+                }
+                System.out.println("for count1 =" + i5);
+            }
+            
+            for (int i6 = 0; i6 < 10; i6++ ) {
+                if (i6 == 5) {
+                    continue;
+                }
+                System.out.println("for count2 =" + i6);
+            }
+
+             
         }
 }
