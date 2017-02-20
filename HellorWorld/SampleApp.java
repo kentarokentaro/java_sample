@@ -149,7 +149,7 @@ public class SampleApp {
             System.out.println(sales2[1]);
             System.out.println(sales2[2]); 
             
-            //書き換え
+            // 代入 and 書き換え
             sales2[0] = 100;
             sales2[1] = 200;
             sales2[2] = 300;
@@ -157,6 +157,15 @@ public class SampleApp {
             System.out.println(sales2[1]);
             System.out.println(sales2[2]); 
             
+            /* 配列の要素を操作 */
+            int[] sales3 = {700,400,500};
+            // length = 要素数
+            for (int i7 = 0; i7 < sales3.length; i7++) {
+                System.out.println("配列の要素_for = " + sales3[i7]);
+            } 
             
+            for(int sale : sales3) {
+                System.out.println("配列の要素_forin = " + sale);
+            }
         }
 }
