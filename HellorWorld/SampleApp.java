@@ -96,5 +96,24 @@ public class SampleApp {
                     System.out.println("wrong signal!");
                     break;
             }
+            
+            /* while */
+            
+            // while
+            int i3 = 0;
+            while (i3 < 10) {
+                System.out.println(i3);
+                i3++;
+            }
+         
+            //do while
+            int i4 = 100;
+            do
+            {
+                System.out.println(i4);
+                i4++;
+            }
+            while (i4 < 10);
+
         }
 }
