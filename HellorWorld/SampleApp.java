@@ -187,5 +187,54 @@ public class SampleApp {
             t1 = "world";
             System.out.println("参照型 = "+s);
             System.out.println("参照型 = "+t1);
+            
+            /* メソッド */
+
+            // 返り値なし、引数なし
+            sayHi1();
+
+            // 返り値なし、引数あり
+            sayHi2("kentaro");
+
+            // 返り値あり、引数なし
+            String s1 = sayHi3();
+            System.out.println(s1);
+            
+            // 返り値あり、引数あり
+            String s2 = sayHi4("male");
+            System.out.println(s2);
+            
+            String s3 = sayHi4("female");
+            System.out.println(s3);
         }
+        
+        /* メソッド */
+        
+        // 返り値なし、引数なし
+        public static void sayHi1() {
+            System.out.println("Hi!!");
+        }
+        
+        // 返り値なし、引数あり
+        public static void sayHi2(String name) {
+            System.out.println("Hi!! " + name);
+        }
+        
+        // 返り値あり、引数なし
+        public static String sayHi3() {
+            return "Hi!! Mr.";
+        }
+        
+        // 返り値あり、引数あり
+        public static String sayHi4(String sex) {
+            String str = "";
+            if (sex == "male") {
+                str = "Steve";                
+            }
+            else if (sex == "female") {
+                str = "Jane";
+            }
+            return str;
+        }
+
 }
