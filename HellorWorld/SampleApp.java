@@ -130,6 +130,33 @@ public class SampleApp {
                 System.out.println("for count2 =" + i6);
             }
 
-             
+            /* 配列 */
+            
+            int[] sales;
+            sales = new int[3];
+            System.out.println(sales[0]);
+            System.out.println(sales[1]);
+            System.out.println(sales[2]); 
+            
+            int[] sales1;
+            sales1 = new int[] {700, 400, 500};
+            System.out.println(sales1[0]);
+            System.out.println(sales1[1]);
+            System.out.println(sales1[2]);            
+            
+            int[] sales2 = {700, 400, 500};
+            System.out.println(sales2[0]);
+            System.out.println(sales2[1]);
+            System.out.println(sales2[2]); 
+            
+            //書き換え
+            sales2[0] = 100;
+            sales2[1] = 200;
+            sales2[2] = 300;
+            System.out.println(sales2[0]);
+            System.out.println(sales2[1]);
+            System.out.println(sales2[2]); 
+            
+            
         }
 }
