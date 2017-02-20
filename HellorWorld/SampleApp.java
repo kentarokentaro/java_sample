@@ -77,5 +77,24 @@ public class SampleApp {
             //条件演算子
             String msg = score > 80 ? "Great!" : "so so...!";
             System.out.println(msg);
+            
+            /* switch */
+            String signal = "green";
+            
+            switch (signal) {
+                case "red":
+                    System.out.println("stop!");
+                    break;
+                case "blue":
+                case "green":
+                    System.out.println("go!");
+                    break;
+                case "yellow":
+                    System.out.println("caution!");
+                    break;
+                default:
+                    System.out.println("wrong signal!");
+                    break;
+            }
         }
 }
