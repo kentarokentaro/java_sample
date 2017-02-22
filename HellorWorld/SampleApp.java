@@ -206,6 +206,12 @@ public class SampleApp {
             
             String s3 = sayHi4("female");
             System.out.println(s3);
+            
+            /* オーバーロード */
+            sayHi5("Kentaro!");
+            sayHi5();
+            
+            
         }
         
         /* メソッド */
@@ -235,6 +241,17 @@ public class SampleApp {
                 str = "Jane";
             }
             return str;
+        }
+        
+        /* オーバーロード */
+        public static void sayHi5(String name) {
+            int x = 10;
+            System.out.println("Hi! " + name);
+        }
+
+        // overload
+        public static void sayHi5(){
+            System.out.println("Hi! Nobady! This is OverLoad!");
         }
 
 }
