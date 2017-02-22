@@ -243,6 +243,15 @@ public class SampleApp {
             System.out.println(adminKen.name);
             adminKen.adminUserSayHello();
             adminKen.classUserSayHi();
+            
+            /* getter setter */
+            User3 ken3;
+            ken3 = new User3("ken3",65);
+            //ken3.setScore(85);
+            //ken3.setScore(0);
+            ken3.setScore((int)(Math.random()*10));
+            ken3.setScore(-12);
+            System.out.println(ken3.getScore());
         }
         
         /* メソッド */
@@ -284,7 +293,6 @@ public class SampleApp {
         public static void sayHi5(){
             System.out.println("Hi! Nobady! This is OverLoad!");
         }
-
 }
 
 
@@ -344,5 +352,32 @@ class AdminUser extends User2 {
     @Override
     void classUserSayHi() {
         System.out.println("[admin] Hi! " + this.name);
+    }
+}
+
+/* getter setter */
+class User3 {
+    
+    private String name;
+    private int score;
+    
+    public User3(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+    
+    public int getScore() { // getter
+        return this.score;
+    }
+
+    public void setScore(int score) { // setter
+        if (score >= 0) {
+            this.score = score;            
+        } 
+        else {
+            System.out.println("無効な値です");
+        }
+
+
     }
 }
