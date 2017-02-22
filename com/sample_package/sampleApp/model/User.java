@@ -1,13 +1,13 @@
 package com.sample_package.sampleApp.model;
 
-class User {
-    String name;
+public class User {
+    protected String name;
     
-    User(String name) {
+    public User(String name) {
         this.name = name;
     }
     
-    void classUserSayHi() {
+    public void classUserSayHi() {
         System.out.println("Hi! " + this.name);
     }
 }

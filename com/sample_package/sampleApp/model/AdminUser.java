@@ -1,17 +1,17 @@
 package com.sample_package.sampleApp.model;
 
-class AdminUser extends User {
-    AdminUser(String name) {
+public class AdminUser extends User {
+    public AdminUser(String name) {
         super(name);
     }
     
-    void adminUserSayHello() {
+    public void adminUserSayHello() {
         System.out.println("Hello! " + this.name);
     }
     
     // override
     @Override
-    void classUserSayHi() {
+    public void classUserSayHi() {
         System.out.println("[admin] Hi! " + this.name);
     }
 }
