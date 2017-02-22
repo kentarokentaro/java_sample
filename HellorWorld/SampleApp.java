@@ -211,6 +211,11 @@ public class SampleApp {
             sayHi5("Kentaro!");
             sayHi5();
             
+            /* クラス */
+            User ken; // 参照
+            ken = new User(); //インスタンス
+            System.out.println(ken.name);
+            ken.classUserSayHi();
             
         }
         
@@ -254,4 +259,15 @@ public class SampleApp {
             System.out.println("Hi! Nobady! This is OverLoad!");
         }
 
+}
+
+
+/* クラス */ 
+class User {
+    String name = "Class Me!"; // フィールド
+    
+    void classUserSayHi() {
+        System.out.println("Class Hi!");
+    }
+    
 }
