@@ -217,6 +217,18 @@ public class SampleApp {
             System.out.println(ken.name);
             ken.classUserSayHi();
             
+            /* クラスコンストラクタ */
+            
+            User1 ken1;
+            ken1 = new User1();
+            System.out.println(ken1.name);
+            ken1.classUserSayHi();
+            
+            User1 ken12;
+            ken12 = new User1("ken12");
+            System.out.println(ken12.name);
+            ken12.classUserSayHi();
+            
         }
         
         /* メソッド */
@@ -271,3 +283,20 @@ class User {
     }
     
 }
+
+/* クラスコンストラクタ */
+class User1 {
+    String name;
+    
+    User1(String name) {
+        this.name = name;
+    }
+    
+    User1() {
+        this("Class Constructor Me!");
+    }
+    
+    void classUserSayHi() {
+        System.out.println("Class Constructor Hi! " + this.name);
+    }
+} 
