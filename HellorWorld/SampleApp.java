@@ -229,6 +229,20 @@ public class SampleApp {
             System.out.println(ken12.name);
             ken12.classUserSayHi();
             
+            
+            /* 継承とオーバーライド */
+            //継承元クラス
+            User2 ken2;
+            ken2 = new User2("ken2");
+            System.out.println(ken2.name);
+            ken2.classUserSayHi();
+            
+            //継承クラス
+            AdminUser adminKen;
+            adminKen = new AdminUser("adminKen");
+            System.out.println(adminKen.name);
+            adminKen.adminUserSayHello();
+            adminKen.classUserSayHi();
         }
         
         /* メソッド */
@@ -300,3 +314,35 @@ class User1 {
         System.out.println("Class Constructor Hi! " + this.name);
     }
 } 
+
+
+/* 継承とオーバーライド */
+
+// 継承元クラス
+class User2 {
+    String name;
+    
+    User2(String name) {
+        this.name = name;
+    }
+    
+    void classUserSayHi() {
+        System.out.println("Class Successor Hi! " + this.name);
+    }
+}
+// 継承クラス
+class AdminUser extends User2 {
+    AdminUser(String name) {
+        super(name);
+    }
+    
+    void adminUserSayHello() {
+        System.out.println("Hello! " + this.name);
+    }
+    
+    // override
+    @Override
+    void classUserSayHi() {
+        System.out.println("[admin] Hi! " + this.name);
+    }
+}
