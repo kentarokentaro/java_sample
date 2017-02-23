@@ -252,6 +252,14 @@ public class SampleApp {
             ken3.setScore((int)(Math.random()*10));
             ken3.setScore(-12);
             System.out.println(ken3.getScore());
+            
+            
+            /* Static */
+            User4.getInfo();
+            User4 ken4 = new User4("ken4");
+            User4.getInfo();
+            User4 ken42 = new User4("ken42");
+            User4.getInfo();
         }
         
         /* メソッド */
@@ -293,6 +301,7 @@ public class SampleApp {
         public static void sayHi5(){
             System.out.println("Hi! Nobady! This is OverLoad!");
         }
+        
 }
 
 
@@ -377,7 +386,20 @@ class User3 {
         else {
             System.out.println("無効な値です");
         }
-
-
     }
 }
+
+/* Static */
+class User4 {
+    private String name;
+    private static int count = 0;
+    
+    public User4(String name) {
+        this.name = name;
+        User4.count++;
+    }
+    
+    public static void getInfo() {
+        System.out.println("# of instances: " + User4.count);
+    }
+} 
