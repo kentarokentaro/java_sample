@@ -275,6 +275,12 @@ public class SampleApp {
             ameKen.sayHi();
             japKen.sayHi();
             
+            
+            /* インターフェース */
+            User8 ken8 = new User8();
+            ken8.print();
+            ken8.getInfo();
+            
         }
         
         /* メソッド */
@@ -502,3 +508,26 @@ class AmericanUser extends User7 {
     }
 }
 
+
+/* インターフェース */
+interface Printable {
+    
+    // 定数
+    double VERSION = 1.2;
+    
+    // 抽象メソッド
+    void print();
+    
+    // defaultメソッド
+    public default void getInfo() {
+        System.out.println("I/F ver. " + Printable.VERSION);
+    }
+    // staticメソッド
+}
+
+class User8 implements Printable {
+    @Override
+    public void print() {
+        System.out.println("Now printing user profile...");
+    }
+}
