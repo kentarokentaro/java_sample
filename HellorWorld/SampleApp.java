@@ -325,6 +325,16 @@ public class SampleApp {
             //i9 = null; // このままint型に渡すとunboxingが動かずNullPointerExceptionになってしまう
             int n2 = i9; // auto unboxing
             System.out.println(n2);
+            
+            
+            /* ジェネリクス */
+            
+            // ジェネリクス型なので<型>を指定する。参照型のみ
+            MyData<Integer> i10 = new MyData<>();
+            i10.getTree(33);
+            
+            MyData<String> s4 = new MyData<>();
+            s4.getTree("hello!!Generics!");
         }
         
         /* メソッド */
@@ -609,3 +619,13 @@ class MyException extends Exception {
         super(s);
     }
 }
+
+/* ジェネリクス */
+class MyData<T> {
+    public void getTree(T x) {
+        System.out.println(x);
+        System.out.println(x);
+        System.out.println(x);
+    }    
+}
+
