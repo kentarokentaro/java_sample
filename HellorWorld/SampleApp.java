@@ -443,3 +443,35 @@ class User5 {
     }
     
 }
+
+/* final */
+
+// 継承できなくなる
+final class User6 {
+    protected String name;
+    
+    // 定数になる
+    private static final double VERSION = 1.1;
+        
+    public User6(String name) {
+        this.name = name;
+        User6.VERSION = 1.2;
+    }
+    
+    // overrideできなくなる 
+    public final void sayHi() {
+        System.out.println("Hi! " + this.name);
+    }
+}
+
+// finalクラスは継承できないのでエラーになる
+// class AdminUser2 extends User6 {
+//     public AdminUser2(String name) {
+//         super(name);
+//     }
+    
+//     @Override
+//     public void sayHi() {
+//         System.out.println("[admin] hi! " + this.name);
+//     }
+// }
