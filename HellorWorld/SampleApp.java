@@ -335,6 +335,15 @@ public class SampleApp {
             
             MyData<String> s4 = new MyData<>();
             s4.getTree("hello!!Generics!");
+            
+            /* スレッド */
+            MyRnnable r = new MyRnnable();
+            Thread t = new Thread(r);
+            t.start();
+            
+            for (int i11 = 0; i11 < 500 ;i11++ ) {
+                System.out.print('.');
+            } 
         }
         
         /* メソッド */
@@ -629,3 +638,12 @@ class MyData<T> {
     }    
 }
 
+/* スレッド */
+class MyRnnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0;i < 500 ; i++ ) {
+            System.out.print('*');
+        } 
+    }
+}
