@@ -337,13 +337,37 @@ public class SampleApp {
             s4.getTree("hello!!Generics!");
             
             /* スレッド */
-            MyRnnable r = new MyRnnable();
-            Thread t = new Thread(r);
-            t.start();
+            // MyRnnable r = new MyRnnable();
+            // Thread t = new Thread(r);
+            // t.start();
             
-            for (int i11 = 0; i11 < 500 ;i11++ ) {
-                System.out.print('.');
-            } 
+            // for (int i11 = 0; i11 < 500 ;i11++ ) {
+            //     System.out.print('.');
+            // } 
+            
+            
+            /* ラムダ式・無名クラス */
+            
+            // ラムダ式
+            // 引数 -> {処理}
+            // new Thread(new Runnable() {
+            //     @Override
+            //     public void run() {
+            //         for (int i12 = 0; i12 < 500 ;i12++ ) {
+            //             System.out.print('@');
+            //         }
+            //     }
+            // }).start();
+            
+            new Thread(() -> {
+                for (int i13 = 0; i13 < 500 ;i13++ ) {
+                    System.out.print('-');
+                } 
+            }).start();
+ 
+            for (int i14 = 0; i14 < 500 ;i14++ ) {
+                System.out.print('~');
+            }
         }
         
         /* メソッド */
