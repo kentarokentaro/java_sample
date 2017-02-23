@@ -260,6 +260,16 @@ public class SampleApp {
             User4.getInfo();
             User4 ken42 = new User4("ken42");
             User4.getInfo();
+            
+            
+            /* イニシャライザ */
+            User5.getInfo();
+            User5 ken5 = new User5("ken5");
+            User5.getInfo();
+            User5 ken52 = new User5("ken52");
+            User5.getInfo();
+            
+            
         }
         
         /* メソッド */
@@ -403,3 +413,33 @@ class User4 {
         System.out.println("# of instances: " + User4.count);
     }
 } 
+
+/* イニシャライザ */
+class User5 {
+    private String name;
+    private static int count;
+    
+    // スタティックイニシャライザ - 最初に一回だけ呼ばれる
+    static {
+        User5.count = 0;
+        System.out.println("1_Static initializer");
+    }
+    
+    // インスタンスイニシャライザ - インスタンス生成されるたびに呼ばれる
+    {
+        System.out.println("2_Instance initializer");
+    }
+ 
+    // コンストラクタ
+    public User5(String name) {
+        this.name = name;
+        User5.count++;
+        System.out.println("3_Constructor");
+    }   
+    
+    // クラスメソッド
+    public static void getInfo() {
+        System.out.println("4_# of instances: " + User5.count);
+    }
+    
+}
