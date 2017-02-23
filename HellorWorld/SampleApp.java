@@ -368,6 +368,37 @@ public class SampleApp {
             for (int i14 = 0; i14 < 500 ;i14++ ) {
                 System.out.print('~');
             }
+            
+            
+            /* Stringクラス */
+            String s5 = "abcdef";
+            // 文字数
+            System.out.println(s5.length());
+            // 部分抜き出し
+            System.out.println(s5.substring(2,5));
+            // 文字列変換
+            System.out.println(s5.replaceAll("ab", "AB"));
+            
+            String s6 = "ab";
+            String s7 = "ab";
+
+            //　文字列の比較
+            if (s6.equals(s7)) {
+                System.out.println("same!");
+            }
+            
+            // 文字列データ予測比較 -> 文字列比較と同じように比較される
+            if (s6 == s7) {
+                System.out.println("same!same!");
+            }
+            
+            String ss1 = new String("ab");
+            String ss2 = new String("ab");
+            
+            // 文字列データ比較 -> 上記の書き方の場合はメモリ領域が比較される
+            if (ss1 == ss2) {
+                System.out.println("same!same!same!");
+            }
         }
         
         /* メソッド */
