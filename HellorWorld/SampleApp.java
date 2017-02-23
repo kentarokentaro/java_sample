@@ -312,6 +312,19 @@ public class SampleApp {
             // わざとマイナス値
             div(5,-2);
             
+            /* ラッバークラス */
+            
+            // 参照型クラス Integer 
+            Integer i8 = new Integer(31);
+            // intValueにてint型に変換できる
+            int n = i8.intValue();
+            System.out.println(n);
+            
+            // よしなにしてくれる
+            Integer i9 = 32; // auto boxing機能
+            //i9 = null; // このままint型に渡すとunboxingが動かずNullPointerExceptionになってしまう
+            int n2 = i9; // auto unboxing
+            System.out.println(n2);
         }
         
         /* メソッド */
