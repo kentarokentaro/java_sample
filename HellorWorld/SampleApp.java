@@ -281,6 +281,29 @@ public class SampleApp {
             ken8.print();
             ken8.getInfo();
             
+            
+            /* 列挙型 */
+            Result res;
+            res = Result.ERROR;
+            int resNum = (int)(Math.random()*3);
+            if (resNum == 1) {
+                res = Result.SUCCESS;
+            }
+            else if (resNum == 0) {
+               res = Result.ERROR; 
+            }
+
+            switch (res) {
+                case SUCCESS:
+                    System.out.println("OK!");
+                    System.out.println(res.ordinal());
+                    break;
+                case ERROR:
+                    System.out.println("NG!");
+                    System.out.println(res.ordinal());
+                    break;
+            }
+            
         }
         
         /* メソッド */
@@ -531,3 +554,10 @@ class User8 implements Printable {
         System.out.println("Now printing user profile...");
     }
 }
+
+/* 列挙型 */
+enum Result {
+    SUCCESS,
+    ERROR,
+}
+
