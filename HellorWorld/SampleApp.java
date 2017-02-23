@@ -269,6 +269,11 @@ public class SampleApp {
             User5 ken52 = new User5("ken52");
             User5.getInfo();
             
+            /* 抽象クラス 具象クラス */
+            AmericanUser ameKen = new AmericanUser();
+            JapaneseUser japKen = new JapaneseUser();
+            ameKen.sayHi();
+            japKen.sayHi();
             
         }
         
@@ -455,7 +460,9 @@ final class User6 {
         
     public User6(String name) {
         this.name = name;
-        User6.VERSION = 1.2;
+        
+        // final定数なので書きかえれない
+        // User6.VERSION = 1.2;
     }
     
     // overrideできなくなる 
@@ -475,3 +482,23 @@ final class User6 {
 //         System.out.println("[admin] hi! " + this.name);
 //     }
 // }
+
+/* 抽象クラス 具象クラス */
+abstract class User7 {
+    public abstract void sayHi();
+}
+
+class JapaneseUser extends User7 {
+    @Override
+    public void sayHi() {
+        System.out.println("こんにちは");
+    }
+}
+
+class AmericanUser extends User7 {
+    @Override
+    public void sayHi() {
+        System.out.println("Hi!");
+    }
+}
+
