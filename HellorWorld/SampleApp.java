@@ -304,6 +304,14 @@ public class SampleApp {
                     break;
             }
             
+            
+            /* 例外処理 */
+            
+            // わざと0除算
+            div(3,0);
+            // わざとマイナス値
+            div(5,-2);
+            
         }
         
         /* メソッド */
@@ -345,7 +353,28 @@ public class SampleApp {
         public static void sayHi5(){
             System.out.println("Hi! Nobady! This is OverLoad!");
         }
-        
+ 
+        /* 例外処理メソッド */
+        public static void div(int a, int b) {
+            try {
+                if (b < 0) {
+                    throw new MyException("not minus");
+                }
+                System.out.println(a / b);
+            } catch(ArithmeticException e) {
+                
+                System.err.println(e.getMessage());
+                
+            } catch(MyException e) {
+                
+                System.err.println(e.getMessage());
+                
+            } finally {
+                
+                System.out.println("-- end --");
+                
+            }
+        }
 }
 
 
@@ -561,3 +590,9 @@ enum Result {
     ERROR,
 }
 
+/* 例外処理 */
+class MyException extends Exception {
+    public MyException(String s) {
+        super(s);
+    }
+}
