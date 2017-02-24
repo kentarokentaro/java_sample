@@ -474,6 +474,35 @@ public class SampleApp {
             for (Integer sale : sales5) {
                 System.out.println(sale);                
             }
+            
+            
+            /* HashMap */
+            // HashMap 要素が順不同
+            // TreeMap 要素が値順にソートされる
+            // LinkedHashMap 要素が追加された順
+            
+            // HashMap<String, Integer> sales6 = new HashMap<>();
+            Map<String, Integer> sales6 = new TreeMap<>();
+            
+            sales6.put("ken1", 123);
+            sales6.put("ken2", 345);
+            sales6.put("ken3", 678);
+            
+            System.out.println(sales6.get("ken1"));
+            System.out.println(sales6.size());
+            
+            //全てを抜き出す[.entrySet]
+            for (Map.Entry<String, Integer> sale: sales6.entrySet()) {
+                System.out.println("1回目 = " + sale.getKey() + ":" + sale.getValue());
+            }
+            
+            sales6.put("ken1", 912);
+            sales6.remove("ken3");
+            
+            for (Map.Entry<String, Integer> sale: sales6.entrySet()) {
+                System.out.println("2回目 = " + sale.getKey() + ":" + sale.getValue());
+            }
+            
         }
         
         /* メソッド */
