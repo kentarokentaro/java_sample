@@ -449,6 +449,31 @@ public class SampleApp {
             for (Integer sale: sales4) {
                 System.out.println(sale);
             }
+            
+            
+            /* Hash set */
+            // HashSet 要素が順不同
+            // TreeSet 要素が値順にソートされる
+            // LinkedHashSet 要素が追加された順
+            // Set<Integer> sales5 = new HashSet<>();
+            // Set<Integer> sales5 = new TreeSet<>();
+            Set<Integer> sales5 = new LinkedHashSet<>();
+            
+            sales5.add(10);
+            sales5.add(20);
+            sales5.add(30);
+            sales5.add(10); // 重複する値は弾かれる
+            
+            System.out.println(sales5.size());
+            for (Integer sale : sales5) {
+                System.out.println(sale);
+            }
+            
+            sales5.remove(30);
+            
+            for (Integer sale : sales5) {
+                System.out.println(sale);                
+            }
         }
         
         /* メソッド */
