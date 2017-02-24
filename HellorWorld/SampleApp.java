@@ -1,4 +1,7 @@
-import java.util.Random; // 乱数を使うクラス
+import java.util.Random; // 乱数を使うためクラス
+// import java.util.ArrayList;
+import java.util.*; // utilクラス全てをインポート
+
 
 public class SampleApp {
         public static void main(String[] args) {
@@ -427,6 +430,25 @@ public class SampleApp {
             System.out.println(r.nextInt(100)); // 0 - 100
             System.out.println(r.nextBoolean()); // ランダムなbool値
             
+            
+            /* Array */
+            // ArrayList<Integer> sales4 = new ArrayList<>();
+            List<Integer> sales4 = new ArrayList<>();
+            
+            sales4.add(10);
+            sales4.add(20);
+            sales4.add(30);
+            
+            for (int i15 = 0; i15 < sales4.size(); i15++) {
+                System.out.println(sales4.get(i15));
+            }
+                
+            sales4.set(0, 100);
+            sales4.remove(2);
+            
+            for (Integer sale: sales4) {
+                System.out.println(sale);
+            }
         }
         
         /* メソッド */
