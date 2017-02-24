@@ -399,6 +399,17 @@ public class SampleApp {
             if (ss1 == ss2) {
                 System.out.println("same!same!same!");
             }
+            
+            /* printf */
+            int score2 = 50;
+            double height = 165.8;
+            String name = "taguchi";
+            
+            System.out.printf("name: %s, score: %d, height: %f\n", name, score2, height);
+            System.out.printf("name: %-10s, score: %10d, height: %5.2f\n", name, score2, height);
+            
+            String s8 = String.format("name: %-10s, score: %10d, height: %5.2f\n", name, score2, height);
+            System.out.println(s8);
         }
         
         /* メソッド */
