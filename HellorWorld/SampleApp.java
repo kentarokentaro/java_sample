@@ -503,6 +503,21 @@ public class SampleApp {
                 System.out.println("2回目 = " + sale.getKey() + ":" + sale.getValue());
             }
             
+            
+            /* Stream API */
+            List<Integer> sales7 = new ArrayList<>(Arrays.asList(12, 30, 22, 4, 9));
+            // for (Integer sale : sales7) {
+            //     System.out.println("Stream API = " + sale);
+            // }
+            
+            sales7
+                .stream()
+                // 中間処理
+                .filter(e -> e % 3 == 0)
+                .map(e -> "(" + e + ")")
+                // 終端処理
+                .forEach(System.out::println);
+            
         }
         
         /* メソッド */
