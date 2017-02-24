@@ -1,6 +1,8 @@
 import java.util.Random; // 乱数を使うためクラス
 // import java.util.ArrayList;
 import java.util.*; // utilクラス全てをインポート
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 
 public class SampleApp {
@@ -518,6 +520,37 @@ public class SampleApp {
                 // 終端処理
                 .forEach(System.out::println);
             
+            
+            /* Java Time */
+            LocalDateTime dateTime1 = LocalDateTime.now();
+            LocalDateTime dateTime2 = LocalDateTime.of(2017, 1, 24, 14, 28,10);
+            LocalDateTime dateTime3 = LocalDateTime.parse("2016-12-24T10:10:10");
+            
+            System.out.println("================================");
+            
+            System.out.println("dateTime1 Year       = " + dateTime1.getYear());
+            System.out.println("dateTime1 Month      = " + dateTime1.getMonth());
+            System.out.println("dateTime1 MonthValue = " + dateTime1.getMonth().getValue());
+            
+            System.out.println("================================");
+            System.out.println("dateTime2 Year       = " + dateTime2.getYear());
+            System.out.println("dateTime2 Month      = " + dateTime2.getMonth());
+            System.out.println("dateTime2 MonthValue = " + dateTime2.getMonth().getValue());
+
+            System.out.println("================================");
+            System.out.println("dateTime3 Year       = " + dateTime3.getYear());
+            System.out.println("dateTime3 Month      = " + dateTime3.getMonth());
+            System.out.println("dateTime3 MonthValue = " + dateTime3.getMonth().getValue());
+
+            System.out.println("================================");
+            // 出力日時の操作
+            System.out.println(dateTime1.plusMonths(2).minusDays(3));
+            System.out.println("================================");
+            
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy!MM!dd!");
+            System.out.println(dateTime1.format(dtf));
+            System.out.println(dateTime2.format(dtf));
+            System.out.println(dateTime3.format(dtf));
         }
         
         /* メソッド */
