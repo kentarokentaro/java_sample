@@ -1,3 +1,5 @@
+import java.util.Random; // 乱数を使うクラス
+
 public class SampleApp {
         public static void main(String[] args) {
             
@@ -410,6 +412,21 @@ public class SampleApp {
             
             String s8 = String.format("name: %-10s, score: %10d, height: %5.2f\n", name, score2, height);
             System.out.println(s8);
+            
+            /* Math Random */
+            double d3 = 53.234;
+            System.out.println(Math.ceil(d3));  // 切り上げ
+            System.out.println(Math.floor(d3)); // 切り下げ
+            System.out.println(Math.round(d3)); // 四捨五入
+            System.out.println(Math.PI); // 円周率
+            System.out.println(Math.random()); // 乱数 
+            
+            // Randomクラス
+            Random r = new Random();
+            System.out.println(r.nextDouble()); // 0 - 1
+            System.out.println(r.nextInt(100)); // 0 - 100
+            System.out.println(r.nextBoolean()); // ランダムなbool値
+            
         }
         
         /* メソッド */
